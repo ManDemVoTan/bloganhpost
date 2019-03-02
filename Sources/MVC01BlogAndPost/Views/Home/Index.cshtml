@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model MVC01BlogAndPost.ViewModels.HomeIndexViewModel
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>BlogId</th>
+            <th>Title</th>
+            <th>ConTent</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var blog in Model.ListBlogs)
+        {
+            <tr>
+                <td>@blog.BlogId</td>
+                <td>@blog.Title</td>
+                <td>@blog.Content</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
